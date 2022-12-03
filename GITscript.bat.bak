@@ -4,15 +4,15 @@
 
 @echo off
 
-cls
+clear
 git "status"
 echo "**************************************************"
 echo "Performing an add for all files in this directory"
 git "add" "."
 git "status"
 echo "**************************************************"
-set /p CommitMessage=Enter a name for the Assignment Directory, then press [return]
-echo %CommitMessage%
+echo "Enter the commit message:"
+read "CommitMessage"
 git "commit" "-m" "%CommitMessage%"
 git "status"
 echo "**************************************************"
