@@ -4,15 +4,15 @@
 
 @echo off
 
-clear
+cls
 git "status"
 echo "**************************************************"
 echo "Performing an add for all files in this directory"
 git "add" "."
 git "status"
 echo "**************************************************"
-echo "Enter the commit message:"
-read "CommitMessage"
+set /p CommitMessage=Enter a commit message, then press [return]
+echo %CommitMessage%
 git "commit" "-m" "%CommitMessage%"
 git "status"
 echo "**************************************************"

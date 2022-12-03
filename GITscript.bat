@@ -1,6 +1,3 @@
-# Date: 19 Nov 2022 
-# Function: Perform a commit 
-# Script: AddCommitPush.sh clear git status 
 
 @echo off
 
@@ -11,7 +8,7 @@ echo "Performing an add for all files in this directory"
 git "add" "."
 git "status"
 echo "**************************************************"
-set /p CommitMessage=Enter a name for the Assignment Directory, then press [return]
+set /p CommitMessage=Enter a commit message, then press [return]
 echo %CommitMessage%
 git "commit" "-m" "%CommitMessage%"
 git "status"
